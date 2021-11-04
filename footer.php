@@ -1,10 +1,18 @@
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <style type="text/css">
 	#footer { clear:both; margin:auto; height: 19px; text-align:center;
 	}
 </style>
-<div id="footer">
-	<p>Copyright &copy; Adrian West 2012 Designed by 
-		<a href="http://www.colycomputerhelp.co.uk/">Adrian West </a>Valid 
-		<a href="http://jigsaw.w3.org/css-validator/">CSS</a> &amp; 
-		<a href="http://validator.w3.org/">HTML5</a></p>
-	</div>
+<footer id="footer">
+	<h4>© 2021 Web App from SADRI PERVANA
+		<a href="https://github.com/sadripervana" target="_blank">
+			<i class="fab fa-github"></i>
+		</a>
+		<a href="https://www.linkedin.com/in/sadri-pervana-b76a3421a/" target="_blank">
+			<i class="fab fa-linkedin"></i>
+		</a>
+		<a href="https://wa.me/+355685101074" target="_blank">
+			<i class="fab fa-whatsapp"></i>
+		</a>
+	</h4>
+</footer>

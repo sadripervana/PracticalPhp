@@ -10,7 +10,8 @@
   </head>
   <body>
     <div id="container">
-      <?php include("header.php"); ?>
+      <!-- Use the revised header -->
+      <?php include("register-header.php"); ?>
       <?php include("nav.php"); ?>
       <?php include("info-col.php"); ?>
       <div id="content"><!-- Start of the page content. -->
@@ -23,26 +24,28 @@ $errors = array(); // Initialize an error array.
 if (empty($_POST['fname'])) {
   $errors[] = 'You did not enter your first name.';
 }
-else { $fn = trim($_POST['fname']);
+else { 
+  $fn = mysqli_real_escape_string($dbcon, trim($_POST['fname']));
 }
 // Was the last name entered?
 if (empty($_POST['lname'])) {
   $errors[] = 'You did not enter your last name.';
 }
-else { $ln = trim($_POST['lname']);
+else {$ln = mysqli_real_escape_string($dbcon,
+  trim($_POST['lname'])) ;
 }
 // Was an email address entered?
 if (empty($_POST['email'])) {
   $errors[] = 'You did not enter your email address.';
 }
-else { $e = trim($_POST['email']);
+else { $e = mysqli_real_escape_string($dbcon, trim($_POST['email']));
 }
 // Did the two passwords match?#2
 if (!empty($_POST['psword1'])) {
   if ($_POST['psword1'] != $_POST['psword2']) {
     $errors[] = 'Your passwords were not the same.';
   }
-  else { $p = trim($_POST['psword1']);
+  else { $p = mysqli_real_escape_string($dbcon, trim($_POST['psword1']));
 }
 }
 else { $errors[] = 'You did not enter your password.';

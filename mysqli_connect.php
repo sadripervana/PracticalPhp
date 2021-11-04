@@ -1,13 +1,14 @@
-<?php
-// This file provides the information for accessing the database.and connecting 
-//to MySQL. It also sets the language coding to utf-8
-// First we define the constants:
-DEFINE ('DB_USER', 'admin');
-DEFINE ('DB_PASSWORD', 'admin');
-DEFINE ('DB_HOST', 'localhost');
-DEFINE ('DB_NAME', 'simpleIdb');
-// Next we assign the database connection to a variable that we will call $dbcon:#2
-$dbcon = @mysqli_connect (DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) 
-OR die ('Could not connect to MySQL: ' . mysqli_connect_error () );
+<?php 
+// Create a connection to the loginndb database and to MYSQL .
+// //Set the encodeing and the access details as constants:
+DEFINE('DB_USER', 'william');
+DEFINE('DB_PASSWORD', 'catonlap');
+DEFINE('DB_HOST', 'loaclhost');
+DEFINE('DB_NAME', 'logindb');
 
-mysqli_set_charset($dbcon, 'utf8');
+// Make the connection:
+$dbcon = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
+	OR die('Could not connect to MySQL: ' . mysqli_connect_error());
+	// Set the encoding ...
+	mysqli_set_charset($dbcon, 'utf8');
+ ?>

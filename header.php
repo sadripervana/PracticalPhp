@@ -1,6 +1,10 @@
+<?php ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL); ?> 
+
 <style type="text/css">
 	#header { margin:10px auto 0 auto; min-width:960px; max-width:1200px; 
-		height:175px; background-image: url('images/tile-pale.jpg'); background-repeat:repeat; 
+		height:175px; background-image: url('https://unsplash.com/photos/rhaS97NhnHg'); background-repeat:repeat; 
 		padding:0; color:white;
 	}
 	h1 {position:relative; top:40px; font-size:350%; color:white; margin:auto 0 auto 20px; 
@@ -13,9 +17,8 @@
 		<h1>This is the header</h1>
 		<div id="reg-navigation">
 			<ul>
-				<li><a href="register-page.php">Register</a></li>
-				<li><a href="rregister-view-users.php">View Users</a></li>
-				<li><a href="register-password.php">New Password</a></li>
-			</ul>
+				<li><a href="login.php">Login</a></li>
+				<li><a href="register-page.php">Register</a>
+				</ul>
+			</div>
 		</div>
-	</div>
