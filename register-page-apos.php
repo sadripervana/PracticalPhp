@@ -27,10 +27,12 @@
 				}
 
 				if(empty($errors)){
-				}
-				?>
-			</p>
-		</div>
+					// If everything's OK,register the user in the database
+				//require ('mysqli_connect.php'); // Connect tothe database.
+			}
+			?>
+		</p>
 	</div>
+</div>
 </body>
 </html>

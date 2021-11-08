@@ -1,7 +1,3 @@
-<?php ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,19 +22,22 @@ error_reporting(E_ALL); ?>
 				//Make the Query:
 				$q = "SELECT CONCAT (lname, ', ', fname) AS name,
 				DATE_FORMAT(registration_date, '%M %d, %Y') AS regdat FROM users ORDER BY 
-				 registration_date ASC ";
+				registration_date ASC ";
 				 $result = @mysqli_query($dbcon, $q); //Run the query.
 				 if($result) { //If it ran ok, display the records.
 				 	//Table header.
-				 	echo '<table>
-				 	<tr><td><b>Name</b></td><td><b>Date Registered</b>
-				 	</td></tr>';
-// Fetch and print all the
-				 	records:
-#3
+				 	echo '
+				 	<table>
+				 	<tr>
+				 		<td><b>Name</b></td>
+				 		<td><b>Date Registered</b></td>
+				 		</tr>';
+					// Fetch and print all therecords:#3
 				 	while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-				 		echo '<tr><td>' . $row['name'] . '</td>
-				 		<td>' . $row['regdat'] . '</td>
+				 		echo '
+				 		<tr>
+					 		<td>' . $row['name'] . '</td>
+					 		<td>' . $row['regdat'] . '</td>
 				 		</tr>'; 
 				 	}
 					echo '</table>'; // Close the table so that it is ready for displaying.
@@ -52,8 +51,8 @@ error_reporting(E_ALL); ?>
 				} //End of if ($result)
 				mysqli_close($dbcon); //Close the database connection. 
 				?>
-		</div> <!-- End of the user's table page content -->
-		<?php include("footer.php"); ?>
-	</div>
-</body>
-</html>
+			</div> <!-- End of the user's table page content -->
+			<?php include("footer.php"); ?>
+		</div>
+	</body>
+	</html>

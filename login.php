@@ -1,3 +1,7 @@
+<?php ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL); ?> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,8 +49,8 @@
 				 		session_start();
 				 		$_SESSION = mysqli_fetch_array($result, MYSQLI_ASSOC);
 				 		// Ensure that the user level is an integer .
-				 		$_SESSION['suer_level'] = (int)
-				 		$_SESSION['suer_level'];
+				 		$_SESSION['user_level'] = (int)
+				 		$_SESSION['user_level'];
 
 				 		//Use a ternary operation to set the URL
 				 		$url = ($_SESSION['user_level'] === 1) ? 'admin=page.php' : 'members-page.php'; 

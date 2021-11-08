@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -8,7 +7,7 @@
 </head>
 <body>
 	<div id="container">
-		<?php include('header-thanks.php') ;?>
+		<?php include("header-thanks.php");?>
 		<?php include("nav.php") ;?>
 		<?php include("info-col.php") ;?>
 		<div id="content"> <!-- Start of the thank you page-content.-->

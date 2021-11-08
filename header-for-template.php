@@ -1,6 +1,6 @@
 <style>
   #header {margin:10px auto 0 auto; min-width:960px; max-width:1200px; height:175px; 
-    background-image: url('https://unsplash.com/photos/rhaS97NhnHg'); background-repeat: repeat; padding:0; 
+    background-image: url('images/header.jpg'); background-repeat: repeat; padding:0; 
     color:white;
   }
   h1 {position:relative; top:40px; font-size:350%; color:white; margin:auto 0 auto 20px; 

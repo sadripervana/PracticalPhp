@@ -10,7 +10,7 @@ h3 { font-size:110%; color:navy; text-align:center;
 }
 #header, #header-members { margin:10px auto 0 auto; min-
 width:960px; max-width:1200px;
-height:175px; background-image: url('https://unsplash.com/photos/rhaS97NhnHg');
+height:175px; background-image: url('images/header.jpg');
 background-repeat: repeat;
 padding:0; color:white;
 }
@@ -76,3 +76,10 @@ p.error { color:red; font-size:105%; font-weight:bold;
 }
 #submit { margin-left:215px;
 }
+
+#loginfields input { float:left; margin-
+bottom:5px; }
+#loginfields label { margin-bottom:5px; }
+#loginfields span { float:left; }
+#loginfields submit { margin:5px auto 5px auto; }
+span.left { text-align:left; }

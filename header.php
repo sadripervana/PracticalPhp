@@ -1,24 +1,23 @@
-<?php ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL); ?> 
-
 <style type="text/css">
-	#header { margin:10px auto 0 auto; min-width:960px; max-width:1200px; 
-		height:175px; background-image: url('https://unsplash.com/photos/rhaS97NhnHg'); background-repeat:repeat; 
+	#header { margin:10px auto 0 auto; min-
+		width:960px; max-width:1200px;
+		height:175px; background-image: url('images/header.jpg'); background-repeat:repeat;
 		padding:0; color:white;
 	}
-	h1 {position:relative; top:40px; font-size:350%; color:white; margin:auto 0 auto 20px; 
+	h1 {position:relative; top:40px; font-size:350%;
+		color:white; margin:auto 0 auto 20px;
 		width: 487px;
 	}
-	#reg-navigation ul { float:right; font-size:medium; width:160px; 
+	#reg-navigation ul { float:right; font-
+		size:medium; width:160px;
 		margin:-150px 15px 0 88%;
 	</style>
 	<div id="header">
 		<h1>This is the header</h1>
 		<div id="reg-navigation">
-			<ul>
-				<li><a href="login.php">Login</a></li>
-				<li><a href="register-page.php">Register</a>
+			<ul><li><a href="login.php">Login</a></li>
+				<li><a href="register-page.php">Register</a></li>
+				 </li>
 				</ul>
 			</div>
 		</div>
