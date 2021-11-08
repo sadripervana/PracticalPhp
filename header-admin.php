@@ -3,7 +3,7 @@
 	<div id="reg-navigation">
 		<ul>
 			<li><a href="logout.php">Logout</a></li>
-			<li><a href="register-view-users-page.php">View Members</a></li>
+			<li><a href="register-view-users.php">View Members</a></li>
 			<li><a href="#">Search</a></li>
 			<li><a href="register-password.php">New Password</a></li>
 		</ul>

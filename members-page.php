@@ -13,7 +13,7 @@ if(!isset($_SESSION['user_level']) or ($_SESSION['user_level'] != 0 ))
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Members page</title>
 	<link rel="stylesheet" href="includes.css">
-	<style type="text/css">
+	<style type="text/css">l
 		#mid-right-col {
 			text-alighn: center; 
 			margin: auto;
@@ -40,6 +40,14 @@ if(!isset($_SESSION['user_level']) or ($_SESSION['user_level'] != 0 ))
 			?>
 			<div id="midcol">
 				<div id="mid-left-col">
+					<h3>Members's Events</h3>
+					<p>The members page content The members page content The members page content <br>The members page content The members page content The members page content <br>The members page content The members page content The members page content <br>
+					</p>
+				</div>
+				<div id="mid-right-col">
+					<h3>Special offers to members only.</h3>
+					<p><b>T-shirt &pound;10.00</b></p>
+					<img src="images/polo.png" alt="Polo Shirt" title="Polo SHirt" height="207">
 				</div>
 			</div>
 		</div>

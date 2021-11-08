@@ -8,7 +8,7 @@ h3 { font-size:110%; color:navy; text-align:center;
 #container {position:relative; min-width:960px; max-width:1200px; margin:auto; 
 	text-align:left;
 }
-#header, #header-members { margin:10px auto 0 auto; min-
+#header, #header-members, #header-admin { margin:10px auto 0 auto; min-
 width:960px; max-width:1200px;
 height:175px; background-image: url('images/header.jpg');
 background-repeat: repeat;

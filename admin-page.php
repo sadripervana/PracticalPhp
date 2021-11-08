@@ -25,7 +25,7 @@ if(!isset($_SESSION['user_level']) or ($_SESSION['user_level'] != 1))
 		?>
 		<div id="content">
 			<!-- Start of the member;s page content. -->
-			<?php echo '<h2> Welcome to the admin page';
+			<?php echo '<h2> Welcome to the admin page ';
 			if(isset($_SESSION['fname'])){
 				echo "{$_SESSION['fname']}";
 			}
