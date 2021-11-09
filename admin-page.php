@@ -32,9 +32,16 @@ if(!isset($_SESSION['user_level']) or ($_SESSION['user_level'] != 1))
 			echo '</h2>';
 			?>
 			<div id="midcol">
-				<h3> You have permission to:</h3><p>&#9632;Use the
-					View members button to see
-				a table of registered members.</p><p>&nbsp;</p>
+				<h3> You have permission to:</h3>
+				<p>&#9632;Edit and delete a record.
+				</p>
+				<p>&#9632;Use the View Members button to page through all
+				the members.</p>
+				<p>&#9632;Use the Search button to locate a particular
+				member.</p>
+				<p>&#9632;Use the Addresses button to locate a member's
+				address and phone number. </p>
+				<p>&nbsp;</p>
 			</div>
 		</div>
 		<div id="footer">
