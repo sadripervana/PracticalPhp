@@ -53,7 +53,7 @@ error_reporting(E_ALL); ?>
 				 		$_SESSION['user_level'];
 
 				 		//Use a ternary operation to set the URL
-				 		$url = ($_SESSION['user_level'] === 1) ? 'admintable/admin-page.php' : 'members-page.php'; 
+				 		$url = ($_SESSION['user_level'] === 1) ? 'admin-page.php' : 'members-page.php'; 
 				 		header('Location: ' . $url); // Make the browser
 				 		//load either the members’ or the admin page
 						//exit(); // Cancel the rest of the script
