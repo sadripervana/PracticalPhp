@@ -26,7 +26,7 @@
 			// This page lets users change their password.
 			// Was the submit button clicked?
 			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-				require ('mysqli_connect.php'); // Connect to the db.
+				require ('mysqli_connect2.php'); // Connect to the db.
 				$errors = array(); // Initialize the errorarray.
 				// Check for an email address:
 				if (empty($_POST['email'])) {

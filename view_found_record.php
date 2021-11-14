@@ -1,18 +1,9 @@
-<?php
-session_start();
-if (!isset($_SESSION['user_level']) or
-	($_SESSION['user_level'] != 1))
-{
-	header("Location: login.php");
-	exit();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>a temporary view_found_record page</title>
+	<title>A temporary view_found_record page</title>
 	<link rel="stylesheet" href="includes.css">
 	<style>
 		p {
@@ -23,7 +14,7 @@ if (!isset($_SESSION['user_level']) or
 <body>
 	<div id="container">
 		<?php include("header-admin.php"); ?>
-		<?php include("nav.php"); ?>
+		<?php include("includes/nav.php"); ?>
 		<?php include("info-col.php"); ?>
 		<div id="content"><!--Start of the page content-->
 			<h2>Search Result</h2>
@@ -39,7 +30,7 @@ if (!isset($_SESSION['user_level']) or
 						$lname=$_POST['lname'];
 						$lname = mysqli_real_escape_string($dbcon,$lname);
 						$q = "SELECT lname, fname, email, DATE_FORMAT(registration_date, '%M %d, %Y') 
-						AS regdat, user_id FROM users WHERE lname ='$lname' AND 
+						AS regdat,class, paid, user_id FROM users WHERE lname ='$lname' AND 
 						fname = '$fname' ORDER BY registration_date ASC";
 					 $result = @mysqli_query($dbcon, $q); // Run the query 
 					 if($result) {
@@ -51,6 +42,8 @@ if (!isset($_SESSION['user_level']) or
 					 	<td><b>Last Name</b></td>
 					 	<td><b>First Name</b></td><td><b>Email</b></td>
 					 	<td><b>Date Registered</b></td>
+					 	<td><b>Class</b></td>
+						<td><b>Paid</b></td>
 					 	</tr>';
 					 	// fetch and dsiplay the records
 					 	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
@@ -63,6 +56,8 @@ if (!isset($_SESSION['user_level']) or
 					 		<td>' . $row['fname'] . '</td>
 					 		<td>' . $row['email'] . '</td>
 					 		<td>' . $row['regdat'] . '</td>
+					 		<td>' . $row['class'] . '</td>
+							<td>' . $row['paid'] . '</td>
 					 		</tr>';
 					 	}
 					 	echo '</table>'; // Close the table

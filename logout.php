@@ -10,7 +10,7 @@ if(!isset($_SESSION['user_id'])){
 	$_SESSION = []; //Destroy the variables
 	session_destroy(); //Destroy the session 
 	setCookie('PHPSESSID', '', time()-3600, '/', '', 0, 0); //Destroy the cookie
-	header("Location:index.php");
+	header("Location: index.php");
 	exit();
 }
 ?>

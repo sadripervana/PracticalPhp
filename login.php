@@ -13,7 +13,7 @@ error_reporting(E_ALL); ?>
 <body>
 	<div id="container">
 		<?php include("login-header.php");?>
-		<?php include("nav.php");?>
+		<?php include("includes/nav.php");?>
 		<?php include("info-col.php");?>
 
 		<!-- Start of the login page content -->
@@ -23,7 +23,7 @@ error_reporting(E_ALL); ?>
 			// Check if the form has been submitted:
 			if($_SERVER['REQUEST_METHOD'] == 'POST'){
 				//connect to database 
-				require("mysqli_connect.php"); 
+				require("mysqli_connect2.php"); 
 				 //Validate the email address 
 				if(!empty($_POST['email'])){
 					$e = mysqli_real_escape_string($dbcon, $_POST['email']);

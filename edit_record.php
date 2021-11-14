@@ -23,7 +23,7 @@ if (!isset($_SESSION['user_level']) or
     <body>
         <div id="container">
             <?php include("header-admin.php"); ?>
-            <?php include("nav.php"); ?>
+            <?php include("includes/nav.php"); ?>
             <?php include("info-col.php"); ?>
 <div id="content"><!--Start of the edit page
     content-->
@@ -128,10 +128,26 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 value="' . $row[2] . '">
                 </p>
                 <br>
+                
+                <br>
+                <p>
+                <label class="label" for="class">Class of Membership:</label>
+                <input class="fl-left" type="text" name="class"
+                size="30" maxlength="50"
+                value="' . $row[3] . '">
+                </p>
+                <br>
+                <p>
+                <label class="label" for="paid">Paid?:
+                </label>
+                <input class="fl-left" type="text" name="paid"
+                size="30" maxlength="50"
+                value="' . $row[4] . '">
+                </p>
+                <br><input type="hidden" name="id" value="' . $id . '" />
                 <p><input id="submit" type="submit"
                 name="submit" value="Edit">
                 </p>
-                <br><input type="hidden" name="id" value="' . $id . '" />
                 </form>';
 } else { // The record could not be validated
     echo '<p class="error">This page has been

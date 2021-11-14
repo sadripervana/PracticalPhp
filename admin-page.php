@@ -20,7 +20,7 @@ if(!isset($_SESSION['user_level']) or ($_SESSION['user_level'] != 1))
 <body>
 	<div id="container">
 		<?php include("header-admin.php"); 
-		include("nav.php");
+		include("includes/nav.php");
 		include("info-col.php");
 		?>
 		<div id="content">

@@ -26,7 +26,7 @@ if (!isset($_SESSION['user_level']) or
 <body>
 	<div class="container">
 		<?php include("header-admin.php"); ?>
-		<?php include("nav.php"); ?>
+		<?php include("includes/nav.php"); ?>
 		<?php include("info-col.php"); ?>
 		<div id="content">
 			<!--Start of search page content-->

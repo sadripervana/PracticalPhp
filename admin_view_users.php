@@ -21,7 +21,7 @@ if (!isset($_SESSION['user_level']) or
 	<body>
 		<div id="container">
 			<?php include("header-admin.php"); ?>
-			<?php include("nav.php"); ?>
+			<?php include("includes/nav.php"); ?>
 			<?php include("info-col.php"); ?>
 <div id="content"><!--Start the content for the
 	table display page-->
@@ -61,7 +61,7 @@ if (!isset($_SESSION['user_level']) or
    }
    // Make the query: 
    $q = "SELECT lname, fname, email, DATE_FORMAT(registration_date, '%M %d, %Y')
-   AS regdat, user_id FROM users ORDER BY registration_date ASC LIMIT $start, $pagerows";
+   AS regdat,class,paid, user_id FROM users ORDER BY registration_date DESC LIMIT $start, $pagerows";
    	$result = @mysqli_query($dbcon, $q); //Run the query.
    	$members = mysqli_num_rows($result);
    	if($result){
@@ -75,18 +75,26 @@ if (!isset($_SESSION['user_level']) or
    		<td><b>First Name</b></td>
    		<td><b>Email</b></td>
    		<td><b>Date Registered</b></td>
+   		<td><b>Class</b></td>
+			<td><b>Paid</b></td>
    		</tr>';
 				// Fetch and print the records:
    		while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
    			echo '<tr>
-   			<td><a href="edit_record.php?id=' .
-   			$row['user_id'] . '">Edit</a></td>
-   			<td><a href="delete_record.php?id=' .
-   			$row['user_id'] . '">Delete</a></td>
+   			<td>
+   			<a href="edit_record.php?id=' . $row['user_id'] . '">Edit
+   			</a>
+   			</td>
+   			<td>
+   			<a href="delete_record.php?id=' .
+   			$row['user_id'] . '">Delete</a>
+   			</td>
    			<td>' . $row['lname'] . '</td>
    			<td>' . $row['fname'] . '</td>
    			<td>' . $row['email'] . '</td>
    			<td>' . $row['regdat'] . '</td>
+   			<td>' . $row['class'] . '</td>
+				<td>' . $row['paid'] . '</td>
    			</tr>';
    		}
 	   	echo '</table>'; // Close the table
