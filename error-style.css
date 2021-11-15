@@ -1,0 +1,10 @@
+body {
+	text-align: center;
+	font-size: large;
+	font-weight: bold;
+}
+span.red {
+	color: red;
+	font-size: x-large;
+	font-weight: bold;
+}

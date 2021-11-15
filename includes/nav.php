@@ -24,5 +24,6 @@ ul { position:absolute; top:190px; left:-10px; color:navy;
 			<li><a href="page-4.php" title="Page four">Page 4</a></li>
 			<li><a href="page-5.php" title="Page five">Page 5</a></li>
 			<li><a href="index.php" title="Return to Home Page">Home Page</a></li>
+			<li><a href="feedback_form.php" title="Contact us">Contact US</a></li>
 		</ul>
 </div><!--end of side column and menu -->

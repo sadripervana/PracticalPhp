@@ -5,7 +5,7 @@ constants:
 DEFINE ('DB_USER', 'admin');
 DEFINE ('DB_PASSWORD', 'admin');
 DEFINE ('DB_HOST', 'localhost');
-DEFINE ('DB_NAME', 'simpleIdb');
+DEFINE ('DB_NAME', 'finalpost');
 // Make the connection:
 $dbcon = @mysqli_connect (DB_HOST, DB_USER,
 DB_PASSWORD, DB_NAME)OR die ('Could not connect to MySQL: ' .
